@@ -1,0 +1,2 @@
+# AmplitudeProject
+Personal project
