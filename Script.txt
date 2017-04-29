@@ -1,0 +1,28 @@
+<script type="text/javascript">
+
+	mixpanel.track("PageView")
+
+    document.getElementById("login").onclick = function(){
+    	mixpanel.track("Login", {"Username": document.getElementById("username_login").value});
+
+    	mixpanel.identify(document.getElementById("username_login").value);
+	
+		alert("Welcome back, " + document.getElementById("username_login").value + "!");
+    }
+
+    document.getElementById('register').onclick = function(){
+    	mixpanel.track("Register", {"Username": document.getElementById("username_register").value});
+
+    	mixpanel.alias(document.getElementById("username_register").value);
+	
+		mixpanel.people.set({
+    		"$first_name": document.getElementById("firstname").value,
+    		"$last_name": document.getElementById("lastname").value,
+    		"$email": document.getElementById("email").value,
+    		"$Username": document.getElementById("username_register").value
+		});
+
+		alert("Thanks for registering, " + document.getElementById("username_register").value + "!");
+    }
+
+</script>
