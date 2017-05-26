@@ -96,7 +96,7 @@ fieldset {
   border-radius: 5px;
   padding-top: 5px;
 }
-.formholder_register input[type="first"], .formholder_register input[type="last"], .formholder_register input[type="email"], .formholder_register input[type="password"] {
+.formholder_register input[type="first"], .formholder_register input[type="last"], .formholder_register input[type="company"], .formholder_register input[type="email"], .formholder_register input[type="password"] {
   padding: 7px 5px;
   margin: 10px 0;
   width: 96%;
@@ -109,7 +109,7 @@ fieldset {
   -o-transition: 0.3s linear;
   transition: 0.3s linear;
 }
-.formholder_register input[type="first"]:focus, .formholder_register input[type="last"]:focus, .formholder_register input[type="email"]:focus, .formholder_register input[type="password"]:focus {
+.formholder_register input[type="first"]:focus, .formholder_register input[type="last"]:focus, .formholder_register input[type="email"]:focus, .formholder_register input[type="company"]:focus, .formholder_register input[type="password"]:focus {
   outline: none;
   box-shadow: 0 0 1px 1px #00a7cf;
 }

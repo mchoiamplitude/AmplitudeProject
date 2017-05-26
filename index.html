@@ -5,6 +5,23 @@
   <title>Amplitude Instrumentation</title>
   
   <link rel="stylesheet" href="css/style.css">
+
+  <script type="text/javascript">
+  (function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script");r.type="text/javascript";
+  r.async=true;r.src="https://d24n15hnbwhuhn.cloudfront.net/libs/amplitude-3.4.0-min.gz.js";
+  r.onload=function(){e.amplitude.runQueuedFunctions()};var i=t.getElementsByTagName("script")[0];
+  i.parentNode.insertBefore(r,i);function s(e,t){e.prototype[t]=function(){this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));
+  return this}}var o=function(){this._q=[];return this};var a=["add","append","clearAll","prepend","set","setOnce","unset"];
+  for(var u=0;u<a.length;u++){s(o,a[u])}n.Identify=o;var c=function(){this._q=[];return this;
+  };var p=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"];
+  for(var l=0;l<p.length;l++){s(c,p[l])}n.Revenue=c;var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId","setGlobalUserProperties","identify","clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId","logEventWithTimestamp","logEventWithGroups"];
+  function v(e){function t(t){e[t]=function(){e._q.push([t].concat(Array.prototype.slice.call(arguments,0)));
+  }}for(var n=0;n<d.length;n++){t(d[n])}}v(n);n.getInstance=function(e){e=(!e||e.length===0?"$default_instance":e).toLowerCase();
+  if(!n._iq.hasOwnProperty(e)){n._iq[e]={_q:[]};v(n._iq[e])}return n._iq[e]};e.amplitude=n;
+  })(window,document);
+
+  amplitude.getInstance().init("c899fdd027a2a20b658acb2325a67738");
+</script>
   
 </head>
 
@@ -18,10 +35,10 @@
           <div class="randompad">
            <fieldset>
              <label name="email">Email</label>
-             <input type="email" value="" />
+             <input type="email" id="login_email" value="" />
              <label name="password">Password</label>
              <input type="password" />
-             <input type="submit" value="login" />             
+             <input type="submit" id="login" value="login" />             
            </fieldset>
          </div>
        </div>
@@ -37,10 +54,12 @@
            <label name="last">Last Name</label>
            <input type="last" value="" />
            <label name="email">Email</label>
-           <input type="email" value="" />
+           <input type="email" id="register_email" value="mchoi@amplitude.com" />
+           <label name="company">Company</label>
+           <input type="company" id="company" value="Amplitude" />
            <label name="password">Password</label>
            <input type="password" />
-           <input type="submit" value="register" />             
+           <input type="submit" id="register" value="register" />             
          </fieldset>
        </div>
      </div>
@@ -56,17 +75,17 @@
 
 
 <div class="vertical">
-  <h2><a href="http://www.amplitude.com">Music</a></h2>
+  <h2><a>Music</a></h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 </div>
 
 <div class="vertical">
-  <h2><a href="http://www.amplitude.com">E-Commerce</a></h2>
+  <h2><a>E-Commerce</a></h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 </div>
 
 <div class="vertical">
-  <h2><a href="http://www.amplitude.com">Media</a></h2>
+  <h2><a>Media</a></h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 </div>
 
