@@ -1,21 +1,18 @@
-amplitude.getInstance().logEvent('Main Page');
-
+amplitude.getInstance().regenerateDeviceId();
 var sessionId = amplitude.getInstance()._sessionId;
-
 
 // User logs in
 $('#loginform').click(function(){
-  amplitude.getInstance().logEvent('Login');
   if ($('.register').css('display') != 'none'){
     $('.register').hide();
   }
   $('.login').fadeToggle('slow');
 
-    document.getElementById('login').onclick = function(){
-    amplitude.getInstance().logEvent('Login');
+  document.getElementById('login').onclick = function(){
     amplitude.getInstance().setUserId(document.getElementById('login_email').value);
+    amplitude.getInstance().logEvent('Login');
+    $('.login').hide();
   }
-
 });
 
 // User registers
@@ -25,25 +22,16 @@ $('#registerform').click(function(){
   }
   $('.register').fadeToggle('slow');
 
-  document.getElementById('register').onclick = function(){
-    amplitude.getInstance().logEvent('Register');
+  document.getElementById('register_submit').onclick = function(){
     amplitude.getInstance().setUserId(document.getElementById('register_email').value);
     amplitude.getInstance().setGroup('Company', document.getElementById('company').value);
-    amplitude.getInstance().ssetUserProperties({'Company': document.getElementById('company').value});
-  }
-});
+    amplitude.getInstance().setUserProperties({'Company': document.getElementById('company').value});
+    amplitude.getInstance().logEvent('Register');
 
-// User clicks on "B2B"
-$('#loginform').click(function(){
-  amplitude.getInstance().logEvent('Login');
-  if ($('.register').css('display') != 'none'){
+
+    window.alert('Thanks for registering, ' + document.getElementById('register_first').value);
+
     $('.register').hide();
   }
-  $('.login').fadeToggle('slow');
-
-    document.getElementById('login').onclick = function(){
-    amplitude.getInstance().logEvent('Login');
-    amplitude.getInstance().setUserId(document.getElementById('login_email').value);
-  }
-
 });
+
